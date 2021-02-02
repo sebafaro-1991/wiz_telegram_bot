@@ -72,7 +72,7 @@ def get_file_path(token, file_id):
 #To download the file from Telegram
 def get_file(msg_list, chat_id):
     
-    #print ('Got voice: %s' % voice)
+    #Define a directory where the audios will be saved, here it will create a folder called "audios_dir" inside the directory where you are running the Py file.
     audios_dir='audios_dir'
     
     for msg in msg_list:
