@@ -11,3 +11,7 @@ https://telepot.readthedocs.io/en/latest/ -->To use telegram bot
 https://pypi.org/project/SpeechRecognition/ --> Speach recognitiom  
 https://pypi.org/project/wavio/ --> convert the audio to WAV for speach recognition  
 https://pypi.org/project/pydub/ --> convert the audio to WAV for speach recognition  
+
+
+You can send the commands (/on, on, /off, off) to turn on/off the indicated light  
+If you send a text it will do it directly trough pywizlight, if you send an audio it will first retrieve it from Telegram server, then save it locally and convert it to WAV, and last it will be send to google speach recognition API to transalate it to text.
