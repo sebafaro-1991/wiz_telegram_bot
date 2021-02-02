@@ -1,6 +1,6 @@
 import telepot
 from telepot.loop import MessageLoop
-from pywizlight import wizlight, PilotBuilder, discovery
+from pywizlight import wizlight, PilotBuilder
 import asyncio
 import speech_recognition as sr
 from requests import get
@@ -11,21 +11,19 @@ import wavio
 import sys
 from pydub import AudioSegment
 
-bot_token = <token_bot>
-light_ip = <wiz light ip>
+bot_token = #<token_bot>
+light_ip = #<wiz light ip>
 #main function where we receive the msg from the end user
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     usermsg = bot.getUpdates(allowed_updates='message')
-    command='test'
     
     if content_type == 'voice':
-        #voice=msg['voice']
         command=get_file(usermsg,chat_id)
         print (command)
     else:
         command = msg['text'] 
-        print ('Got command: %s' % command)
+        print (command)
         
     
     #Generate loop for the async function
